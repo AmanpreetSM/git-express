@@ -29,4 +29,13 @@ app.post("/todos", async (req, res) => {
     description: description,
   });
 });
+
+app.post("/body", async (req, res) => {
+  const { height, weight } = req.body;
+
+  res.json({
+    height: height,
+    weight: weight,
+  });
+});
 app.listen(PORT, console.log(`Website is hosted on http://localhost:3000`));
